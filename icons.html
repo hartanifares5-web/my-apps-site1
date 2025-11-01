@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know More About The Apps</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<style>
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.social-link {
+  color: white;
+  font-size: 50px;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  cursor: pointer;
+}
+
+.social-link:hover,
+.social-link:focus {
+  transform: scale(1.3);
+}
+
+.fa-github:hover { color: #cfcfcf; text-shadow: 0 0 10px #cfcfcf; }
+.fa-linkedin-in:hover { color: #0A66C2; text-shadow: 0 0 10px #0A66C2; }
+.fa-instagram:hover { 
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #fff;
+}
+.fa-youtube:hover { color: #FF0000; text-shadow: 0 0 10px #FF0000; }
+.fa-facebook-f:hover { color: #1877F2; text-shadow: 0 0 10px #1877F2; }
+.fa-twitter:hover { color: #1DA1F2; text-shadow: 0 0 10px #1DA1F2; }
+.fa-tiktok:hover,
+.fa-tiktok:focus { 
+  color: #ffffff; 
+  text-shadow: 2px 0 #25F4EE, -2px 0 #FE2C55, 0 0 10px #ffffff;
+}
+.fa-snapchat-ghost:hover,
+.fa-snapchat-ghost:focus { 
+  color: #FFFC00; 
+  text-shadow: 0 0 15px #FFFC00; 
+}
+.fa-pinterest-p:hover { color: #BD081C; text-shadow: 0 0 10px #BD081C; }
+.fa-reddit-alien:hover { color: #FF4500; text-shadow: 0 0 10px #FF4500; }
+.fa-discord:hover { color: #7289DA; text-shadow: 0 0 10px #7289DA; }
+.fa-spotify:hover { color: #1DB954; text-shadow: 0 0 10px #1DB954; }
+.fa-whatsapp:hover { color: #25D366; text-shadow: 0 0 10px #25D366; }
+.fa-telegram:hover { color: #0088CC; text-shadow: 0 0 10px #0088CC; }
+.fa-netflix:hover { color: #E50914; text-shadow: 0 0 10px #E50914; }
+.fa-twitch:hover { color: #9146FF; text-shadow: 0 0 10px #9146FF; }
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.95);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 900px;
+  text-align: left;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.modal p {
+  margin-bottom: 15px;
+}
+
+.modal p span {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #888;
+}
+</style>
+</head>
+<body>
+<h1>Know More About The Apps</h1>
+
+<div class="social-links">
+  <i class="fab fa-github social-link" data-app="github"></i>
+  <i class="fab fa-linkedin-in social-link" data-app="linkedin"></i>
+  <i class="fab fa-instagram social-link" data-app="instagram"></i>
+  <i class="fab fa-youtube social-link" data-app="youtube"></i>
+  <i class="fab fa-facebook-f social-link" data-app="facebook"></i>
+  <i class="fab fa-twitter social-link" data-app="twitter"></i>
+  <i class="fab fa-tiktok social-link" data-app="tiktok"></i>
+  <i class="fab fa-snapchat-ghost social-link" data-app="snapchat"></i>
+  <i class="fab fa-pinterest-p social-link" data-app="pinterest"></i>
+  <i class="fab fa-reddit-alien social-link" data-app="reddit"></i>
+  <i class="fab fa-discord social-link" data-app="discord"></i>
+  <i class="fab fa-spotify social-link" data-app="spotify"></i>
+  <i class="fab fa-whatsapp social-link" data-app="whatsapp"></i>
+  <i class="fab fa-telegram social-link" data-app="telegram"></i>
+  <i class="fab fa-netflix social-link" data-app="netflix"></i>
+  <i class="fab fa-twitch social-link" data-app="twitch"></i>
+</div>
+
+<!-- Modal -->
+<div id="appModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="appTitle"></h2>
+    <p id="appInfo"></p>
+  </div>
+</div>
+
+<footer>Created by Mohamed</footer>
+
+<script>
+const appsData = {
+  github: { title:"GitHub", info:"GitHub is a <span>web-based platform</span> for version control using Git. Launched in <span>2008</span>, it allows developers to collaborate, host, and review code. Millions of <span>repositories</span> are available, making it a cornerstone for open-source projects and professional development." },
+  linkedin: { title:"LinkedIn", info:"LinkedIn is a <span>professional networking platform</span> launched in 2003. It allows users to connect with colleagues, discover job opportunities, and share professional content. With over <span>900 million users</span>, it is a hub for career growth and networking." },
+  instagram: { title:"Instagram", info:"Instagram is a <span>photo and video sharing</span> social media platform launched in 2010. Users can post visual content, follow others, and engage with communities. It has over <span>2 billion active users</span> and features <span>Stories, Reels, and IGTV</span> for creative expression." },
+  youtube: { title:"YouTube", info:"YouTube, launched in 2005, is the world's leading <span>video-sharing platform</span>. Users can upload, view, comment, and monetize videos. With over <span>2.5 billion monthly users</span>, it serves as a hub for entertainment, learning, and creative content." },
+  facebook: { title:"Facebook", info:"Facebook is a <span>social networking service</span> launched in 2004. Users can connect with friends, share posts, photos, videos, and join communities. It has over <span>2.9 billion active users</span> and is one of the largest social networks globally." },
+  twitter: { title:"Twitter", info:"Twitter, also known as X, is a <span>microblogging platform</span> launched in 2006. Users post Tweets, follow accounts, and engage in discussions. It has hundreds of millions of users and is a major platform for news, trends, and real-time information." },
+  tiktok: { title:"TikTok", info:"TikTok is a <span>short-form video platform</span> launched in 2016. Users create and share 15-60 second videos with music, filters, and effects. TikTok has over <span>1 billion active users</span> and is known for viral content and creative trends." },
+  snapchat: { title:"Snapchat", info:"Snapchat is a <span>multimedia messaging app</span> launched in 2011. It allows users to send temporary messages, images, and videos. Known for <span>Stories</span> and AR filters, it has over <span>500 million monthly active users</span>." },
+  pinterest: { title:"Pinterest", info:"Pinterest is a <span>visual discovery</span> and bookmarking platform launched in 2010. Users can find ideas, save content to boards, and explore interests. It has hundreds of millions of users worldwide." },
+  reddit: { title:"Reddit", info:"Reddit, launched in 2005, is a <span>social news aggregation</span> and discussion platform. Users submit content, vote, and participate in communities called subreddits. It has over <span>430 million active users</span>." },
+  discord: { title:"Discord", info:"Discord is a <span>VoIP and messaging platform</span> launched in 2015. It allows communities to communicate via text, voice, and video. It has over <span>300 million users</span> and is popular among gamers." },
+  spotify: { title:"Spotify", info:"Spotify, launched in 2008, is a <span>digital music streaming service</span>. Users can listen to millions of songs and podcasts. It has over <span>500 million active users</span> globally." },
+  whatsapp: { title:"WhatsApp", info:"WhatsApp is a <span>messaging app</span> launched in 2009. It allows text messaging, voice, and video calls. It has over <span>2 billion users</span> and is one of the most popular communication apps worldwide." },
+  telegram: { title:"Telegram", info:"Telegram is a <span>cloud-based instant messaging platform</span> launched in 2013. It allows messages, media sharing, channels, and groups. It has over <span>800 million active users</span> and is known for privacy and speed." },
+  netflix: { title:"Netflix", info:"Netflix is a <span>streaming service</span> launched in 2007. It offers movies, TV shows, and original content on-demand. It has over <span>230 million subscribers</span> globally and is a leader in entertainment streaming." },
+  twitch: { title:"Twitch", info:"Twitch, launched in 2011, is a <span>live streaming platform</span> focused on gaming and creative content. Users can watch, stream, and chat live. It has over <span>140 million monthly users</span>." }
+};
+
+// Modal functionality
+const modal = document.getElementById("appModal");
+const titleEl = document.getElementById("appTitle");
+const infoEl = document.getElementById("appInfo");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".social-link").forEach(icon => {
+  icon.addEventListener("click", () => {
+    const app = icon.getAttribute("data-app");
+    if(appsData[app]){
+      titleEl.textContent = appsData[app].title;
+      infoEl.innerHTML = appsData[app].info; // استخدم innerHTML لعرض الـspan الملون
+      modal.style.display = "block";
+    }
+  });
+});
+
+closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+window.addEventListener("click", (e) => { if(e.target == modal) modal.style.display = "none"; });
+</script>
+</body>
+</html>
